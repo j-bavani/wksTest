@@ -59,13 +59,13 @@
                   />
                 </div>
                 <!-- Add button -->
-                <button type="button" class="btn btn-success" @click="addNewProductForm">
+                <button type="button" class="btn btn-success float-right" @click="addNewProductForm">
                   <i class="fa fa-plus"></i>
                 </button>
               </div>
             </div>
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-info">Submit</button>
           </form>
         </div>
       </div>
