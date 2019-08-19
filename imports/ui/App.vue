@@ -9,7 +9,7 @@
             <!--  First step -->
             <!-- Order Name -->
             <div class="form-group" v-if="!orderId">
-              <label for="orderName">Name:</label>
+              <label for="orderName">Der Name:</label>
               <input
                 type="text"
                 class="form-control"
