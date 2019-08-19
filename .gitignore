@@ -12,4 +12,21 @@ ubuntu-bionic-18.04-cloudimg-console.log
 
 Vagrantfile
 
+<<<<<<< HEAD
 .cache/
+=======
+# next.js build output
+.next
+
+.cache/
+
+.meteor/
+
+.vagrant/
+
+node_modules
+
+playbook.yml
+
+Vagrantfile
+>>>>>>> developer
