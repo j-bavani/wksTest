@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.27",
+    "buffer": "^5.3.0",
+    "jquery": "^3.4.1",
+    "meteor-node-stubs": "^0.4.1",
+    "popper.js": "^1.15.0",
+    "vue": "^2.6.10",
+    "vue-meteor-tracker": "^1.2.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "devDependencies": {},
+  "name": "vagrant",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
