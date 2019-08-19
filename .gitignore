@@ -1,4 +1,26 @@
 node_modules/
+<<<<<<< Updated upstream
+=======
+
+.meteor/
+
+.vagrant/
+
+node_modules
+
+playbook.yml
+
+ubuntu-bionic-18.04-cloudimg-console.log
+
+Vagrantfile
+
+.cache/
+
+# next.js build output
+.next
+
+.cache/
+>>>>>>> Stashed changes
 
 .meteor/
 
