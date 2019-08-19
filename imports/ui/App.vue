@@ -18,7 +18,6 @@
                 v-model="orderName"
                 required
               />
-
             </div>
             <!-- Second  step -->
             <!-- Order number -->
@@ -33,7 +32,6 @@
                   v-model="orderId"
                   readonly
                 />
-
               </div>
               <!-- Product From -->
               <div class="mb-3">
@@ -46,7 +44,6 @@
                     aria-label="Close"
                     @click="deleteProductForm(index)"
                   >
-                  
                     <span aria-hidden="true">&times;</span>
                   </button>
                   <!-- Product name -->
@@ -59,36 +56,50 @@
                   />
                 </div>
                 <!-- Add button -->
-                <button type="button" class="btn btn-success float-right" @click="addNewProductForm">
+                <button
+                  type="button"
+                  class="btn btn-success float-right"
+                  @click="addNewProductForm"
+                >
                   <i class="fa fa-plus"></i>
                 </button>
               </div>
             </div>
             <!-- Submit button -->
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
       <!-- Right column - Reports -->
       <div class="col-6">
         <div class="border p-3 row">
-          <div class="col-6">
+          <div class="col-12">
             <!-- Order list -->
             <ul>
-              <li v-for="(order,index) in currentOrderList" :key="index">
-                <span>{{order.name}}</span>
+              <li v-for="(order,index) in currentOrderList" :key="index" class="mb-1 row border-bottom pb-2 pt-2">
+                <div class="col-6">{{order.name}}</div>
                 <!-- Info button -->
-                <button class="btn btn-sm" @click="showOrderDetails(order._id)">
-                  <i class="fa fa-info"></i>
-                </button>
-                <!-- Delete button -->
-                <button class="btn btn-sm" @click="deleteOrder(order._id)">
-                  <i class="fa fa-trash-alt"></i>
-                </button>
+                <div class="col-6">
+                  
+                  <!-- Delete button -->
+                  <button
+                    class="btn btn-sm btn-outline-danger float-right ml-2"
+                    @click="deleteOrder(order._id)"
+                  >
+                    <i class="fa fa-trash-alt"></i>
+                  </button>
+
+                  <button
+                    class="btn btn-sm btn-outline-info float-right"
+                    @click="showOrderDetails(order._id)"
+                  >
+                    <i class="fa fa-info"></i>
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
-          <div class="col-6">
+          <div class="col-12">
             <!-- Product list -->
             <ul v-if="productList">
               <li v-for="(product,index) in productList" :key="index">{{product.name}}</li>
@@ -114,7 +125,7 @@ export default {
         }
       ],
       orderList: "",
-      productList: "",
+      productList: null,
       msg: ""
     };
   },
@@ -156,7 +167,6 @@ export default {
             this.myProducts = [{ name: "" }];
           }
         );
-        
       } else {
         // Insert order
         Meteor.call("InsertOrder", this.orderName, (err, res) => {
@@ -189,7 +199,7 @@ export default {
       ProductsListPublish: []
     },
     /**
-     * Order list 
+     * Order list
      */
     currentOrderList() {
       return OrdersCollection.find({});
